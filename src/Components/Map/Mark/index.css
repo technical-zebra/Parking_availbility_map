@@ -1,0 +1,12 @@
+.mark {
+  width: 30px;
+  height: 30px;
+  color: white;
+  background: grey;
+  padding: 10px;
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
