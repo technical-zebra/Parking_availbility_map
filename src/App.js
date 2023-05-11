@@ -1,18 +1,33 @@
-import './App.css';
+import './App.css'
 
-import React from "react";
-import GoogleMapReact from 'google-map-react';
+import React from "react"
+import GoogleMapReact from 'google-map-react'
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+const AnyReactComponent = ({ text }) => (
+  <div style={{
+    width: '110px',
+    height: '100px',
+    color: 'white',
+    background: 'grey',
+    padding: '15px 10px',
+    display: 'inline-flex',
+    textAlign: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '100%',
+  }}>
+    {text}
+  </div>
+);
 
 function App() {
   const defaultProps = {
     center: {
       lat: 10.99835602,
-      lng: 77.01502627
+      lng: 10.99835602
     },
     zoom: 11
-  };
+  }
 
   return (
     <div style={{ height: '100vh', width: '100%' }}>
@@ -22,13 +37,13 @@ function App() {
         defaultZoom={defaultProps.zoom}
       >
         <AnyReactComponent
-          lat={59.955413}
-          lng={30.337844}
-          text="My Marker"
+          lat={10.99835602}
+          lng={10.99835602}
+          text={'This is my marker'}
         />
       </GoogleMapReact>
     </div>
-  );
+  )
 }
 
 
