@@ -7,8 +7,8 @@ export default function Map() {
 
   const defaultProps = {
     center: {
-      lat: 10.99835602,
-      lng: 10.99835602
+      lat: 59.955413,
+      lng: 30.337844
     },
     zoom: 15
   }
@@ -20,7 +20,8 @@ export default function Map() {
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <Mark text='Mark' />
+        <Mark text='Mark' lat={59.955413}
+          lng={30.337844} />
       </GoogleMapReact>
     </div>
   )
