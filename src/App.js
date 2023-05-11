@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 import React from "react";
@@ -6,7 +5,7 @@ import GoogleMapReact from 'google-map-react';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
-function App(){
+function App() {
   const defaultProps = {
     center: {
       lat: 10.99835602,
@@ -23,7 +22,7 @@ function App(){
         defaultZoom={defaultProps.zoom}
       >
         <AnyReactComponent
-          lat={59.955413}n
+          lat={59.955413}
           lng={30.337844}
           text="My Marker"
         />
