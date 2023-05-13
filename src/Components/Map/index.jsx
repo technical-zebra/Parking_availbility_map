@@ -3,6 +3,7 @@ import './index.css'
 import GoogleMapReact from 'google-map-react'
 import Mark from './Mark'
 
+
 export default function Map() {
 
   const defaultProps = {
@@ -16,7 +17,7 @@ export default function Map() {
   return (
     <div className='map' >
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyDtGXKaUHWYpdH3Li-vc__gix0KXtxG17I" }}
+        bootstrapURLKeys={{ key: "AIzaSyC5HhHY5UQQgHe22c5nL4UbG2NqzRTK8oc" }}
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
