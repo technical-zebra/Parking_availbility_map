@@ -1,6 +1,11 @@
-.FAB-container {
-    z-index: 2;
-    position: absolute;
-    right: 20px;
-    bottom: 40px;
+.FAB {
 }
+
+.container {
+    position: absolute;
+    height: 60px;
+    z-index: 2;
+    width: 60px;
+    bottom: 80px;
+    right: 20px;
+  }
