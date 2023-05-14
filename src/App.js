@@ -8,14 +8,17 @@ import SearchBox from './Components/GoogleSearchBar';
 function App() {
   return (
     <div className='app' >
-      {/* google map component */}
-      <Map />
+      
 
       {/* search bar component */}
       <SearchBox />
 
       {/* filter component */}
       <Filter />
+
+      {/* google map component */}
+      <Map />
+      
     </div>
   )
 }

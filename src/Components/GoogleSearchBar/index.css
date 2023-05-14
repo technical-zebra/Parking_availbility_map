@@ -6,7 +6,9 @@
   height: 50px;
   background-color: white;
   border: 2px solid gray;
+  z-index: 1;
 }
+
 
 .searchbox {
   width: 400px;
