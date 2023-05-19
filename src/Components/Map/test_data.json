@@ -1,0 +1,621 @@
+{
+    "odata.metadata": "http://datamall2.mytransport.sg/ltaodataservice/$metadata#BicycleParkingv2",
+    "value": [
+        {
+            "Description": "SIMS PLACE BLOCK 49_YB",
+            "Latitude": 1.317272795880728,
+            "Longitude": 103.87970071596376,
+            "RackType": "Yellow Box",
+            "RackCount": 9,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "SIMS PLACE BLOCK 51_YB",
+            "Latitude": 1.3164063501877286,
+            "Longitude": 103.87884501031726,
+            "RackType": "Yellow Box",
+            "RackCount": 16,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "UPPER BOON KENG ROAD BLOCK 16_YB",
+            "Latitude": 1.3154243410794824,
+            "Longitude": 103.87198092069852,
+            "RackType": "Yellow Box",
+            "RackCount": 16,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "UPPER BOON KENG ROAD BLOCK 19_YB",
+            "Latitude": 1.3149786507615602,
+            "Longitude": 103.87357655316752,
+            "RackType": "Yellow Box",
+            "RackCount": 16,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "LORONG 3 GEYLANG BLOCK 111_YB",
+            "Latitude": 1.312175766668324,
+            "Longitude": 103.8735177255387,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "SIMS DRIVE BLOCK 44_YB",
+            "Latitude": 1.3165283765283815,
+            "Longitude": 103.87666409983228,
+            "RackType": "Yellow Box",
+            "RackCount": 13,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "BUS STOP 80071",
+            "Latitude": 1.3137873244218137,
+            "Longitude": 103.87654210254104,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "BUS STOP 80301",
+            "Latitude": 1.3165395348242244,
+            "Longitude": 103.87347049205086,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "BUS STOP 80309",
+            "Latitude": 1.3171923602443152,
+            "Longitude": 103.87301773978956,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "BUS STOP 80311",
+            "Latitude": 1.314399842891681,
+            "Longitude": 103.87251246908164,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "BUS STOP 80319",
+            "Latitude": 1.3150650154204966,
+            "Longitude": 103.87282554993426,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "LORONG 13 GEYLANG",
+            "Latitude": 1.3127427020828895,
+            "Longitude": 103.87785485115838,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "LORONG 17 GEYLANG",
+            "Latitude": 1.313813593732967,
+            "Longitude": 103.8786824420159,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "LORONG 19 GEYLANG",
+            "Latitude": 1.3135895017180363,
+            "Longitude": 103.87926950692454,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "LORONG 6 GEYLANG",
+            "Latitude": 1.311805003200994,
+            "Longitude": 103.87633743982859,
+            "RackType": "Yellow Box",
+            "RackCount": 8,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "LORONG 7 GEYLANG",
+            "Latitude": 1.3134435841154275,
+            "Longitude": 103.87532550910205,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "LORONG 8 GEYLANG",
+            "Latitude": 1.3120593474348055,
+            "Longitude": 103.8768971123451,
+            "RackType": "Yellow Box",
+            "RackCount": 8,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "NEAR LORONG TAHAR",
+            "Latitude": 1.3132277290702106,
+            "Longitude": 103.87566320350541,
+            "RackType": "Yellow Box",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "PELTON CANAL PARK CONNECTOR",
+            "Latitude": 1.3196297651572766,
+            "Longitude": 103.8744395620356,
+            "RackType": "Yellow Box",
+            "RackCount": 20,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "GEYLANG WEST CC",
+            "Latitude": 1.3158694934755604,
+            "Longitude": 103.87246524377478,
+            "RackType": "PA_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "380017-1",
+            "Latitude": 1.3153898356919316,
+            "Longitude": 103.87193977640285,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "380017-2",
+            "Latitude": 1.3151780614660245,
+            "Longitude": 103.87140203065466,
+            "RackType": "HDB_RACKS",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "380018-1",
+            "Latitude": 1.3147019895614445,
+            "Longitude": 103.87227967661934,
+            "RackType": "HDB_RACKS",
+            "RackCount": 15,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "380046-1",
+            "Latitude": 1.317273892822194,
+            "Longitude": 103.87887808012587,
+            "RackType": "HDB_RACKS",
+            "RackCount": 16,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "380049-1",
+            "Latitude": 1.3168009068200313,
+            "Longitude": 103.8793569879222,
+            "RackType": "HDB_RACKS",
+            "RackCount": 9,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "380049-2",
+            "Latitude": 1.317282915087359,
+            "Longitude": 103.87971319086532,
+            "RackType": "HDB_RACKS",
+            "RackCount": 10,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "380049-3",
+            "Latitude": 1.3169425080132586,
+            "Longitude": 103.87885412827133,
+            "RackType": "HDB_RACKS",
+            "RackCount": 12,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "380049-4",
+            "Latitude": 1.3169997475002695,
+            "Longitude": 103.87883916322778,
+            "RackType": "HDB_RACKS",
+            "RackCount": 17,
+            "ShelterIndicator": "N"
+        },
+        {
+            "Description": "380005-1",
+            "Latitude": 1.3127995546507671,
+            "Longitude": 103.87303500386463,
+            "RackType": "HDB_RACKS",
+            "RackCount": 7,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380005-2",
+            "Latitude": 1.3129226432916967,
+            "Longitude": 103.87294867929117,
+            "RackType": "HDB_RACKS",
+            "RackCount": 8,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380019-1",
+            "Latitude": 1.3156170485107148,
+            "Longitude": 103.87415773282619,
+            "RackType": "HDB_RACKS",
+            "RackCount": 2,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380019-2",
+            "Latitude": 1.3155146195839895,
+            "Longitude": 103.87420562272432,
+            "RackType": "HDB_RACKS",
+            "RackCount": 2,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380019-3",
+            "Latitude": 1.31497839123013,
+            "Longitude": 103.87338547029155,
+            "RackType": "HDB_RACKS",
+            "RackCount": 3,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380019-4",
+            "Latitude": 1.3156923642775233,
+            "Longitude": 103.87410684914325,
+            "RackType": "HDB_RACKS",
+            "RackCount": 5,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380038-1",
+            "Latitude": 1.3181131015237644,
+            "Longitude": 103.87412012989009,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380038-2",
+            "Latitude": 1.3179624713550633,
+            "Longitude": 103.87415005970676,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380039-1",
+            "Latitude": 1.3186493426497008,
+            "Longitude": 103.87415605740102,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380039-2",
+            "Latitude": 1.3188240711146844,
+            "Longitude": 103.87427578944774,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380040-1",
+            "Latitude": 1.3174366222024427,
+            "Longitude": 103.87611234038002,
+            "RackType": "HDB_RACKS",
+            "RackCount": 4,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380040-2",
+            "Latitude": 1.3174426458868613,
+            "Longitude": 103.87620213735352,
+            "RackType": "HDB_RACKS",
+            "RackCount": 5,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380040-3",
+            "Latitude": 1.317478788611876,
+            "Longitude": 103.87668105441078,
+            "RackType": "HDB_RACKS",
+            "RackCount": 5,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380040-4",
+            "Latitude": 1.317454693155511,
+            "Longitude": 103.87638173121165,
+            "RackType": "HDB_RACKS",
+            "RackCount": 5,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380040-5",
+            "Latitude": 1.3174757772879317,
+            "Longitude": 103.87661221016856,
+            "RackType": "HDB_RACKS",
+            "RackCount": 8,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380041-1",
+            "Latitude": 1.3167798851527122,
+            "Longitude": 103.87562742636743,
+            "RackType": "HDB_RACKS",
+            "RackCount": 4,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380041-2",
+            "Latitude": 1.316858212824565,
+            "Longitude": 103.87560946826362,
+            "RackType": "HDB_RACKS",
+            "RackCount": 4,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380041-3",
+            "Latitude": 1.316912439715079,
+            "Longitude": 103.8755974962576,
+            "RackType": "HDB_RACKS",
+            "RackCount": 4,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380041-4",
+            "Latitude": 1.3170690953921578,
+            "Longitude": 103.87555260055728,
+            "RackType": "HDB_RACKS",
+            "RackCount": 4,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380041-5",
+            "Latitude": 1.31712332233337,
+            "Longitude": 103.87553763529657,
+            "RackType": "HDB_RACKS",
+            "RackCount": 7,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380041-6",
+            "Latitude": 1.3164725999535771,
+            "Longitude": 103.87566333985176,
+            "RackType": "HDB_RACKS",
+            "RackCount": 13,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380041-7",
+            "Latitude": 1.31724382751726,
+            "Longitude": 103.87545382696501,
+            "RackType": "HDB_RACKS",
+            "RackCount": 15,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380042-1",
+            "Latitude": 1.316951599185179,
+            "Longitude": 103.87584892805366,
+            "RackType": "HDB_RACKS",
+            "RackCount": 3,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380042-2",
+            "Latitude": 1.3169124346411911,
+            "Longitude": 103.87589382581608,
+            "RackType": "HDB_RACKS",
+            "RackCount": 4,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380042-3",
+            "Latitude": 1.3168792967617888,
+            "Longitude": 103.87586089974799,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380042-4",
+            "Latitude": 1.316891341898996,
+            "Longitude": 103.87616022266965,
+            "RackType": "HDB_RACKS",
+            "RackCount": 7,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380043-1",
+            "Latitude": 1.317117282137649,
+            "Longitude": 103.87641165767752,
+            "RackType": "HDB_RACKS",
+            "RackCount": 2,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380043-2",
+            "Latitude": 1.317060042364655,
+            "Longitude": 103.87643859578763,
+            "RackType": "HDB_RACKS",
+            "RackCount": 4,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380043-3",
+            "Latitude": 1.3170178660116376,
+            "Longitude": 103.87644158822562,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380043-4",
+            "Latitude": 1.317060041739269,
+            "Longitude": 103.87647451445842,
+            "RackType": "HDB_RACKS",
+            "RackCount": 7,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380044-1",
+            "Latitude": 1.3165207662754799,
+            "Longitude": 103.8776717960434,
+            "RackType": "HDB_RACKS",
+            "RackCount": 5,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380044-2",
+            "Latitude": 1.3165087168379845,
+            "Longitude": 103.87762390416096,
+            "RackType": "HDB_RACKS",
+            "RackCount": 5,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380044-3",
+            "Latitude": 1.316216509116076,
+            "Longitude": 103.87683668042499,
+            "RackType": "HDB_RACKS",
+            "RackCount": 9,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380044-4",
+            "Latitude": 1.3164725638633652,
+            "Longitude": 103.87772567327444,
+            "RackType": "HDB_RACKS",
+            "RackCount": 14,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380044-5",
+            "Latitude": 1.316529822029545,
+            "Longitude": 103.87666008543202,
+            "RackType": "HDB_RACKS",
+            "RackCount": 14,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380045-1",
+            "Latitude": 1.317081094308374,
+            "Longitude": 103.87847099770642,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380055-1",
+            "Latitude": 1.3188043006723733,
+            "Longitude": 103.87831837400711,
+            "RackType": "HDB_RACKS",
+            "RackCount": 5,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380055-2",
+            "Latitude": 1.3188464740265733,
+            "Longitude": 103.8784800091634,
+            "RackType": "HDB_RACKS",
+            "RackCount": 5,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380055-3",
+            "Latitude": 1.318948894856586,
+            "Longitude": 103.87887811055727,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380063-1",
+            "Latitude": 1.3165779735688528,
+            "Longitude": 103.87942582808658,
+            "RackType": "HDB_RACKS",
+            "RackCount": 11,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "380063-2",
+            "Latitude": 1.3165388118348214,
+            "Longitude": 103.87932106436386,
+            "RackType": "HDB_RACKS",
+            "RackCount": 11,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "381002-1",
+            "Latitude": 1.3136865215342806,
+            "Longitude": 103.8721357834098,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "381003-1",
+            "Latitude": 1.3138494263116496,
+            "Longitude": 103.87244871952325,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "381111-1",
+            "Latitude": 1.3123514021135751,
+            "Longitude": 103.87382842533681,
+            "RackType": "HDB_RACKS",
+            "RackCount": 9,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "381112-1",
+            "Latitude": 1.3121857081989419,
+            "Longitude": 103.87390923970709,
+            "RackType": "HDB_RACKS",
+            "RackCount": 9,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "382003-1",
+            "Latitude": 1.3142295447322383,
+            "Longitude": 103.8727113019223,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "383003-1",
+            "Latitude": 1.313965264064877,
+            "Longitude": 103.87302063450142,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "384002-1",
+            "Latitude": 1.3131181417029811,
+            "Longitude": 103.87252424381498,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        },
+        {
+            "Description": "384003-1",
+            "Latitude": 1.3134765401920852,
+            "Longitude": 103.87270049936045,
+            "RackType": "HDB_RACKS",
+            "RackCount": 6,
+            "ShelterIndicator": "Y"
+        }
+    ]
+}
