@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useState } from 'react'
+import React, { Fragment, useEffect, useRef, useState } from 'react'
 import './index.css'
 
 // Radio
@@ -55,6 +55,13 @@ export default function Filter(props) {
   const filterRef = useRef(null)
   const foldIconRef = useRef(null)
   const searchButtonRef = useRef(null)
+
+  // Effects
+
+  useEffect(() => {
+
+  }, [])
+
 
   // For handling rack type
   const getTypeValue = (e, newValue) => {
