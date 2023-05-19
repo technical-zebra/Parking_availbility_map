@@ -5,6 +5,7 @@
   width: 400px;
   height: 100%;
   z-index: 1;
+  transition: all 1s;
 }
 
 .filter-container {
@@ -24,6 +25,9 @@ h3 {
 
 h1 .css-i4bv87-MuiSvgIcon-root {
   font-size: 2.4rem !important;
+  cursor: pointer;
+  transition: all 1s;
+  margin-right: -5px;
 }
 
 .rackType,
@@ -31,6 +35,11 @@ h1 .css-i4bv87-MuiSvgIcon-root {
 .shelter,
 .search-btn {
   margin-top: 60px;
+}
+
+.search-btn {
+  opacity: 1;
+  transition: all 1s;
 }
 
 .search-btn .css-1rwt2y5-MuiButtonBase-root-MuiButton-root {

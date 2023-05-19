@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useRef, useState } from 'react'
 import './index.css'
 
 // Radio
@@ -18,7 +18,7 @@ import Switch from '@mui/material/Switch';
 import Button from '@mui/material/Button';
 
 // Icons
-import FilterAltIcon from '@mui/icons-material/FilterAlt';
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
 import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import VerticalAlignTopIcon from '@mui/icons-material/VerticalAlignTop';
@@ -46,9 +46,15 @@ function valuetext(value) {
 }
 export default function Filter(props) {
   // States
-  const [rackType, setRackType] = React.useState('Both')
-  const [rackCount, setRackCount] = React.useState(100)
-  const [shelterChecked, setShelterChecked] = React.useState(true);
+  const [rackType, setRackType] = useState('Both')
+  const [rackCount, setRackCount] = useState(100)
+  const [shelterChecked, setShelterChecked] = useState(true);
+  const [isFolded, setIsFolded] = useState(false)
+
+  // Refs
+  const filterRef = useRef(null)
+  const foldIconRef = useRef(null)
+  const searchButtonRef = useRef(null)
 
   // For handling rack type
   const getTypeValue = (e, newValue) => {
@@ -72,11 +78,19 @@ export default function Filter(props) {
     console.log(shelterChecked);
   }
 
+  // when panle is folded and unfolded
+  const fold = () => {
+    setIsFolded(p => !p)
+    filterRef.current.style.left = isFolded ? '0' : '-340px'
+    foldIconRef.current.style.transform = isFolded ? 'rotate(0deg)' : 'rotate(180deg)'
+    searchButtonRef.current.style.opacity = isFolded ? '1' : '0'
+  }
+
   return (
     <Fragment>
-      <div className='filter'>
+      <div className='filter' ref={filterRef}>
         <div className="filter-container">
-          <h1>Filter: <FilterAltIcon /></h1>
+          <h1 onClick={fold}>Filter: <KeyboardDoubleArrowLeftIcon ref={foldIconRef} /></h1>
           {/* Rack Type Radio */}
           <div className="rackType">
             <h3>Rack Type <SportsMotorsportsIcon /></h3>
@@ -97,7 +111,7 @@ export default function Filter(props) {
           {/* Rack Count Slider */}
           <div className="rackCount">
             <h3>Lots Available <AutoGraphIcon /></h3>
-            <Box sx={{ width: 400 }}>
+            <Box sx={{ width: 300 }}>
               <Slider
                 aria-label="Always visible"
                 defaultValue={100}
@@ -125,7 +139,7 @@ export default function Filter(props) {
           </div>
 
           {/* Search Button */}
-          <div className="search-btn">
+          <div className="search-btn" ref={searchButtonRef}>
             <Button variant="outlined" startIcon={<SearchIcon />} onClick={handleSearch}>
               Search
             </Button>
