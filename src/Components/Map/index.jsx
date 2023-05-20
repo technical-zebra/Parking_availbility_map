@@ -1,26 +1,38 @@
 import React, { useState, useEffect } from 'react'
 import './index.css'
+
+// import leaflet map component
 import { MapContainer, TileLayer } from 'react-leaflet'
 import Marker from '../Marker'
 import SearchBox from '../GoogleSearchBar'
 import MyLocation from '../MyLocation'
-import test from './test_data.json'
 import myLocationIcon from '../../Images/myLocationIcon.png'
 import L from "leaflet";
 
+// import axios
+import JsonpData from '../../Controller/JsonpData'
+import axios from 'axios'
+
 export default function Map() {
-  const [jsonData, setJsonData] = useState([]);
+  const [fullData, setFullData] = useState([]);
   const [filterData, setFilterData] = useState([]) // filtered data based on the jsonData
   const [isFiltered, setIsFiltered] = useState(false) // the switch
   const [myCords, setMyCords] = useState({});
 
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const { data: { value } } = await axios.get('http://127.0.0.1:80/api/get');
+  //     console.log(value);
+  //   }
+  //   getData()
+  // })
+
+  useEffect(() => {
+  })
+
   const getCords = (e) => {
     setMyCords(p => ({ lat: e.lat, lng: e.lng })) // lat and long of current user
   }
-
-  useEffect(() => {
-    setJsonData(test.value)
-  }, [])
 
   const defaultProps = {
     center: {
@@ -59,7 +71,7 @@ export default function Map() {
         long={item.Longitude}
         info={"Rack Counts: " + item.RackCount}
         key={item.Description}
-      />) : jsonData.map((item) => (
+      />) : fullData.map((item) => (
         <Marker
           lat={item.Latitude}
           long={item.Longitude}
@@ -67,9 +79,11 @@ export default function Map() {
           key={item.Description}
         />
       ))}
-
       <MemoizedSearchBox />
+      <JsonpData />
     </MapContainer>
+
+
   )
 }
 
