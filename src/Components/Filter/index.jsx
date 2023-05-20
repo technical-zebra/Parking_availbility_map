@@ -2,27 +2,27 @@ import React, { Fragment, useEffect, useRef, useState } from 'react'
 import './index.css'
 
 // Radio
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
+import Radio from '@mui/material/Radio'
+import RadioGroup from '@mui/material/RadioGroup'
+import FormControlLabel from '@mui/material/FormControlLabel'
+import FormControl from '@mui/material/FormControl'
 
 // Slider
 import Box from '@mui/material/Box'
 import Slider from '@mui/material/Slider'
 
 // Switch
-import Switch from '@mui/material/Switch';
+import Switch from '@mui/material/Switch'
 
 // Button
-import Button from '@mui/material/Button';
+import Button from '@mui/material/Button'
 
 // Icons
-import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft';
-import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports';
-import AutoGraphIcon from '@mui/icons-material/AutoGraph';
-import VerticalAlignTopIcon from '@mui/icons-material/VerticalAlignTop';
-import SearchIcon from '@mui/icons-material/Search';
+import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrowLeft'
+import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports'
+import AutoGraphIcon from '@mui/icons-material/AutoGraph'
+import VerticalAlignTopIcon from '@mui/icons-material/VerticalAlignTop'
+import SearchIcon from '@mui/icons-material/Search'
 
 const marks = [
   {
@@ -31,14 +31,14 @@ const marks = [
     ,
   },
   {
-    value: 250,
-    label: '250+',
+    value: 25,
+    label: '25+',
   },
   {
-    value: 500,
-    label: '500+',
+    value: 50,
+    label: '50+',
   }
-];
+]
 
 
 function valuetext(value) {
@@ -47,8 +47,9 @@ function valuetext(value) {
 export default function Filter(props) {
   // States
   const [rackType, setRackType] = useState('Both')
-  const [rackCount, setRackCount] = useState(100)
-  const [shelterChecked, setShelterChecked] = useState(true);
+  const [rackCount, setRackCount] = useState(0)
+  const [shelterChecked, setShelterChecked] = useState(true)
+  const [shelterIndicator, setShelterIndicator] = useState('Y')
   const [isFolded, setIsFolded] = useState(false)
 
   // Refs
@@ -70,19 +71,25 @@ export default function Filter(props) {
 
   // For handling lots value
   const getRackCounts = (e, newValue) => {
-    setRackCount(newValue);
-  };
+    setRackCount(newValue)
+  }
 
   // For handling shelter value
   const getShelterValue = (event) => {
-    setShelterChecked(event.target.checked);
-  };
+    setShelterChecked(event.target.checked)
+    if (event.target.checked) {
+      setShelterIndicator('Y')
+    }
+    else {
+      setShelterIndicator('N')
+    }
+  }
 
   //For handling search
   const handleSearch = () => {
-    console.log(rackType);
-    console.log(rackCount);
-    console.log(shelterChecked);
+    console.log(rackType)
+    console.log(rackCount)
+    console.log(shelterIndicator)
   }
 
   // when panle is folded and unfolded
@@ -121,11 +128,11 @@ export default function Filter(props) {
             <Box sx={{ width: 300 }}>
               <Slider
                 aria-label="Always visible"
-                defaultValue={100}
+                defaultValue={10}
                 getAriaValueText={valuetext}
-                step={20}
+                step={5}
                 min={0}
-                max={500}
+                max={50}
                 marks={marks}
                 valueLabelDisplay="on"
                 onChange={getRackCounts}

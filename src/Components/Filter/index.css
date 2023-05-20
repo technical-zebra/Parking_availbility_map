@@ -37,6 +37,10 @@ h1 .css-i4bv87-MuiSvgIcon-root {
   margin-top: 60px;
 }
 
+
+
+.shelter:hover .shelter::after {}
+
 .search-btn {
   opacity: 1;
   transition: all 1s;
