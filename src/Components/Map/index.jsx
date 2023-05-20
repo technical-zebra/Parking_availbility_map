@@ -5,33 +5,34 @@ import './index.css'
 import { MapContainer, TileLayer } from 'react-leaflet'
 import Marker from '../Marker'
 import SearchBox from '../GoogleSearchBar'
-import MyLocation from '../MyLocation'
-import myLocationIcon from '../../Images/myLocationIcon.png'
-import L from "leaflet";
+import MyLocation from '../MyLocation/'
+import { iconLocation } from '../../Images/Icon'
+import L from 'leaflet'
 
-// import axios
-import JsonpData from '../../Controller/JsonpData'
-import axios from 'axios'
+// import request function api
+import fetchData from '../../API/fetchData.js'
 
 export default function Map() {
-  const [fullData, setFullData] = useState([]);
-  const [filterData, setFilterData] = useState([]) // filtered data based on the jsonData
-  const [isFiltered, setIsFiltered] = useState(false) // the switch
-  const [myCords, setMyCords] = useState({});
-
-  // useEffect(() => {
-  //   const getData = async () => {
-  //     const { data: { value } } = await axios.get('http://127.0.0.1:80/api/get');
-  //     console.log(value);
-  //   }
-  //   getData()
-  // })
+  const [fullData, setFullData] = useState([])
+  const [filterData, setFilterData] = useState([])
+  const [isFiltered, setIsFiltered] = useState(false)
+  const [myCords, setMyCords] = useState({})
 
   useEffect(() => {
-  })
+    fetchData(1.31, 103.8935379, 1).then((res) => {
+      setFullData(res)
+    })
+  }, [])
+
+  useEffect(() => {
+    console.log(fullData)
+  }, [fullData])
 
   const getCords = (e) => {
-    setMyCords(p => ({ lat: e.lat, lng: e.lng })) // lat and long of current user
+    fetchData(e.lat, e.lng, 0.5).then((res) => {
+      setFullData(res)
+    })
+    setMyCords({ lat: e.lat, lng: e.lng })
   }
 
   const defaultProps = {
@@ -42,11 +43,6 @@ export default function Map() {
     zoom: 15,
   }
 
-  const myIcon = L.icon({
-    iconUrl: myLocationIcon,
-    iconSize: [64, 64],
-  })
-
   return (
     <MapContainer
       className="map"
@@ -55,36 +51,37 @@ export default function Map() {
       scrollWheelZoom={true}
     >
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        attribution='&copy <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker lat="1.3159" long="103.8758" info="JCU School. Yeah!!!" />
 
       {myCords.lat && myCords.lng && !isNaN(myCords.lat) && !isNaN(myCords.lng) && (
-        <Marker lat={myCords.lat} long={myCords.lng} info="My Location!!!" icon={myIcon} />
+        <Marker lat={myCords.lat} long={myCords.lng} info="My Location!!!" icon={iconLocation} />
       )}
 
       <MyLocation getCords={getCords} />
 
-      {isFiltered ? filterData.map(item => <Marker
-        lat={item.Latitude}
-        long={item.Longitude}
-        info={"Rack Counts: " + item.RackCount}
-        key={item.Description}
-      />) : fullData.map((item) => (
-        <Marker
-          lat={item.Latitude}
-          long={item.Longitude}
-          info={"Rack Counts: " + item.RackCount}
-          key={item.Description}
-        />
-      ))}
+      {isFiltered
+        ? filterData.map((item) => (
+          <Marker
+            lat={item.Latitude}
+            long={item.Longitude}
+            info={`Rack Counts: ${item.RackCount}`}
+            key={item.Latitude}
+          />
+        ))
+        : fullData.map((item) => (
+          <Marker
+            lat={item.Latitude}
+            long={item.Longitude}
+            info={`Name: ${item.Description} Rack Counts: ${item.RackCount}`}
+            key={item.Latitude}
+          />
+        ))}
       <MemoizedSearchBox />
-      <JsonpData />
     </MapContainer>
-
-
   )
 }
 
-const MemoizedSearchBox = React.memo(SearchBox);
+const MemoizedSearchBox = React.memo(SearchBox)
