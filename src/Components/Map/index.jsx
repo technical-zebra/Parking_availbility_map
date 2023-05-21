@@ -12,7 +12,11 @@ import L from 'leaflet'
 // import request function api
 import fetchData from '../../API/fetchData.js'
 
-export default function Map() {
+// import redux
+import { connect } from 'react-redux'
+import { filter } from '../Redux/action.js'
+
+function Map() {
   const [fullData, setFullData] = useState([])
   const [filterData, setFilterData] = useState([])
   const [isFiltered, setIsFiltered] = useState(false)
@@ -85,3 +89,7 @@ export default function Map() {
 }
 
 const MemoizedSearchBox = React.memo(SearchBox)
+export default connect(
+  state => ({ filterParams: state }),
+  { filter }
+)(Map)

@@ -1,0 +1,1 @@
+export const filter = (filterParams) => ({ type: 'filter', value: filterParams })

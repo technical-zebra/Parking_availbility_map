@@ -1,6 +1,10 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react'
 import './index.css'
 
+// React-Redux
+import { connect } from 'react-redux'
+import { filter } from '../Redux/action.js'
+
 // Radio
 import Radio from '@mui/material/Radio'
 import RadioGroup from '@mui/material/RadioGroup'
@@ -44,7 +48,7 @@ const marks = [
 function valuetext(value) {
   return `${value}`
 }
-export default function Filter(props) {
+function Filter(props) {
   // States
   const [rackType, setRackType] = useState('Both')
   const [rackCount, setRackCount] = useState(0)
@@ -163,3 +167,8 @@ export default function Filter(props) {
     </Fragment>
   )
 }
+
+export default connect(
+  state => ({ filterParams: state }),
+  { filter }
+)(Filter)
