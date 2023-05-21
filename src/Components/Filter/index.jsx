@@ -92,9 +92,6 @@ function Filter(props) {
 
   //For handling search
   const handleSearch = () => {
-    console.log(rackType)
-    console.log(rackCount)
-    console.log(shelterIndicator)
     props.filter({ rackType, rackCount, shelterIndicator })
   }
 

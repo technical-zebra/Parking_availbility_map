@@ -16,7 +16,7 @@ import fetchData from '../../API/fetchData.js'
 import { connect } from 'react-redux'
 import { filter } from '../Redux/action.js'
 
-function Map() {
+function Map(props) {
   const [fullData, setFullData] = useState([])
   const [filterData, setFilterData] = useState([])
   const [isFiltered, setIsFiltered] = useState(false)
@@ -31,6 +31,10 @@ function Map() {
   useEffect(() => {
     console.log(fullData)
   }, [fullData])
+
+  useEffect(() => {
+    console.log(props.filterParams)
+  }, [props.filterParams])
 
   const getCords = (e) => {
     fetchData(e.lat, e.lng, 0.5).then((res) => {

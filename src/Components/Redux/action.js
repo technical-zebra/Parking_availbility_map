@@ -1,1 +1,1 @@
-export const filter = (filterParams) => ({ type: 'filter', value: filterParams })
+export const filter = (filterParams) => ({ type: 'filter', data: filterParams })
