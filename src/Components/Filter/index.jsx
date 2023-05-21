@@ -48,6 +48,7 @@ const marks = [
 function valuetext(value) {
   return `${value}`
 }
+
 function Filter(props) {
   // States
   const [rackType, setRackType] = useState('Both')
@@ -94,6 +95,7 @@ function Filter(props) {
     console.log(rackType)
     console.log(rackCount)
     console.log(shelterIndicator)
+    props.filter({ rackType, rackCount, shelterIndicator })
   }
 
   // when panle is folded and unfolded
