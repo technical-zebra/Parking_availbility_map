@@ -17,6 +17,8 @@ export default function SearchBox() {
     style: 'bar',
   })
 
+  //const results = await provider.search({ query: input.value });
+
   map.addControl(search);
 
   return null

@@ -7,7 +7,6 @@ import Marker from '../Marker'
 import SearchBox from '../GoogleSearchBar'
 import MyLocation from '../MyLocation/'
 import { iconLocation } from '../../Images/Icon'
-import L from 'leaflet'
 
 // import request function api
 import fetchData from '../../API/fetchData.js'
@@ -28,13 +27,27 @@ function Map(props) {
     })
   }, [])
 
-  useEffect(() => {
-    console.log(fullData)
-  }, [fullData])
+  //e.includes('_RACKS');
 
   useEffect(() => {
-    console.log(props.filterParams)
-  }, [props.filterParams])
+    if (props.filterParams === 'clear') {
+      setIsFiltered(false)
+    }
+    else {
+      const { RackType, RackCount, ShelterIndicator } = props.filterParams;
+
+      const newData = fullData.filter(
+        (e) =>
+          (RackType === 'All' ||
+            (RackType === 'Racks' && e.RackType.includes('_RACKS')) ||
+            (RackType === 'Yellow Box' && e.RackType === 'Yellow Box')) &&
+          e.RackCount >= RackCount &&
+          e.ShelterIndicator === ShelterIndicator
+      )
+      setFilterData(newData)
+      setIsFiltered(true)
+    }
+  }, [props.filterParams, fullData])
 
   const getCords = (e) => {
     fetchData(e.lat, e.lng, 0.5).then((res) => {
