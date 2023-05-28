@@ -37,7 +37,19 @@ h1 .css-i4bv87-MuiSvgIcon-root {
   margin-top: 60px;
 }
 
+.clear-btn {
+  margin-top: 20px;
 
+}
+
+.clear-btn button {
+  border: 1px solid rgba(252, 4, 4, 0.5);
+  color: #fc0000 !important;
+}
+
+.clear-btn button:hover {
+  border: 1px solid rgba(252, 4, 4, 0.5);
+}
 
 .shelter:hover .shelter::after {}
 

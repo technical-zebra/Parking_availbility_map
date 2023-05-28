@@ -4,6 +4,7 @@ import './index.css'
 // React-Redux
 import { connect } from 'react-redux'
 import { filter } from '../Redux/action.js'
+import { clear } from '../Redux/action.js'
 
 // Radio
 import Radio from '@mui/material/Radio'
@@ -27,6 +28,7 @@ import SportsMotorsportsIcon from '@mui/icons-material/SportsMotorsports'
 import AutoGraphIcon from '@mui/icons-material/AutoGraph'
 import VerticalAlignTopIcon from '@mui/icons-material/VerticalAlignTop'
 import SearchIcon from '@mui/icons-material/Search'
+import ClearIcon from '@mui/icons-material/Clear';
 
 const marks = [
   {
@@ -51,10 +53,10 @@ function valuetext(value) {
 
 function Filter(props) {
   // States
-  const [rackType, setRackType] = useState('Both')
-  const [rackCount, setRackCount] = useState(0)
-  const [shelterChecked, setShelterChecked] = useState(true)
-  const [shelterIndicator, setShelterIndicator] = useState('Y')
+  const [RackType, setRackType] = useState('All')
+  const [RackCount, setRackCount] = useState(0)
+  const [ShelterChecked, setShelterChecked] = useState(true)
+  const [ShelterIndicator, setShelterIndicator] = useState('Y')
   const [isFolded, setIsFolded] = useState(false)
 
   // Refs
@@ -92,7 +94,11 @@ function Filter(props) {
 
   //For handling search
   const handleSearch = () => {
-    props.filter({ rackType, rackCount, shelterIndicator })
+    props.filter({ RackType, RackCount, ShelterIndicator })
+  }
+
+  const handleClear = () => {
+    props.filter('clear')
   }
 
   // when panle is folded and unfolded
@@ -120,7 +126,7 @@ function Filter(props) {
               >
                 <FormControlLabel value="Racks" control={<Radio />} label="Racks" />
                 <FormControlLabel value="Yellow Box" control={<Radio />} label="Yellow Box" />
-                <FormControlLabel value="both" control={<Radio />} label="Both" />
+                <FormControlLabel value="All" control={<Radio />} label="All" />
               </RadioGroup>
             </FormControl>
           </div>
@@ -148,7 +154,7 @@ function Filter(props) {
             <h3>Sheltered <VerticalAlignTopIcon /></h3>
             <span>Unsheltered</span>
             <Switch
-              checked={shelterChecked}
+              checked={ShelterChecked}
               onChange={getShelterValue}
               inputProps={{ 'aria-label': 'controlled' }}
             />
@@ -160,6 +166,12 @@ function Filter(props) {
             <Button variant="outlined" startIcon={<SearchIcon />} onClick={handleSearch}>
               Search
             </Button>
+
+            <div className="clear-btn">
+              <Button variant="outlined" startIcon={<ClearIcon />} onClick={handleClear}>
+                Clear
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -169,5 +181,8 @@ function Filter(props) {
 
 export default connect(
   state => ({ filterParams: state }),
-  { filter }
+  {
+    filter,
+    clear
+  }
 )(Filter)
