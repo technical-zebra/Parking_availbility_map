@@ -28,7 +28,7 @@ Considering these factors, we decided to switch to using **node.js (Express.js)*
 - **Click on Map Markers**: When users click on the markers representing bicycle parking spots on the map, provide additional information about the specific parking spot. This information can include the detailed address, type of parking spot, availability status, and whether it is covered.
 
 ## React Redux
-React Redux is used in the provided code to manage the application state. It includes action creators (filter and clear), a reducer (locationReducer), and a store configuration using configureStore. The store is exported as the default export. React Redux enables components to dispatch actions and access the state from the store.
+React Redux is used in the provided code to manage the application state of bicycle parking lots filter. It includes action creators (filter and clear), a reducer (locationReducer), and a store configuration using configureStore. The store is exported as the default export. React Redux enables components to dispatch actions and access the state from the store.
 
 # Running the project
 
