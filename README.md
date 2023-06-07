@@ -4,6 +4,9 @@
 The goal of the **Parking_availbility_map** project is to provide a convenient and user-friendly bicycle parking map application for **cycling enthusiasts, athletes, and individuals** who use bicycles as a mode of transportation in **Singapore**. The main functionality of this application is to allow users to **search for nearby bicycle parking spaces** and **filter them based on specific criteria**, ensuring a convenient and accessible travel experience.
 
 
+## Challenges and different implementation options
+
+
 During the development process, a challenging requirement was to select and maintain a map API that is **cost-effective** and **well-documented** for displaying parking spaces. Initially, we chose **Google Maps**, but we encountered limitations with the documentation and functionality of the **Google Maps React library**. Additionally, the pricing model based on clicks was not conducive to long-term maintenance. Therefore, we decided to use the more comprehensive documentation provided by **Leaflet.js** and the **Leaflet React library**. These libraries offer the advantage of providing high-quality maps and a seamless user experience, while also allowing API users to access them **permanently free of charge**.
 
 
@@ -12,7 +15,7 @@ Another challenging requirement is to request real-time data from the Singapore 
 Considering these factors, we decided to switch to using **node.js (Express.js)** to build our own backend proxy server. This approach provides more flexibility in supporting various request types and offers higher user security. It also allows us to handle code processing on the backend and deliver the results to the frontend. Finally, we deployed the server on **Azure**.
 
 
-**Functionality:**
+## Functionality:
 
 - **Nearby Bicycle Parking Spot Search**: Utilize the location feature to obtain the user's current position and display nearby bicycle parking spots on a map. Provide an intuitive map visualization and show relevant information about the bicycle parking spots, such as name, location, and number of available parking spaces.
 
@@ -24,6 +27,8 @@ Considering these factors, we decided to switch to using **node.js (Express.js)*
 
 - **Click on Map Markers**: When users click on the markers representing bicycle parking spots on the map, provide additional information about the specific parking spot. This information can include the detailed address, type of parking spot, availability status, and whether it is covered.
 
+## React Redux
+React Redux is used in the provided code to manage the application state. It includes action creators (filter and clear), a reducer (locationReducer), and a store configuration using configureStore. The store is exported as the default export. React Redux enables components to dispatch actions and access the state from the store.
 
 # Running the project
 
