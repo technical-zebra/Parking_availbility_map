@@ -23,3 +23,12 @@ Considering these factors, we decided to switch to using **node.js (Express.js)*
 - **Search Address Display**: Enable users to input search addresses and display them on the map. This allows users to search for bicycle parking spots in locations other than just the nearby area.
 
 - **Click on Map Markers**: When users click on the markers representing bicycle parking spots on the map, provide additional information about the specific parking spot. This information can include the detailed address, type of parking spot, availability status, and whether it is covered.
+
+
+# Running the project
+
+
+## on Github Page
+
+
+## on Local
