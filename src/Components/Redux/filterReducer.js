@@ -1,7 +1,7 @@
 
 const initialState = { rackType: 'All', rackCount: 0, shelterIndicator: 'Y' }
 
-export default function locationReducer(prevState = initialState, action) {
+export default function filterReducer(prevState = initialState, action) {
   const { type, data } = action
 
   switch (type) {
