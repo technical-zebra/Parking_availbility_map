@@ -3,7 +3,7 @@ import "./App.css";
 import React from "react";
 import Map from "./Components/Map";
 import Filter from "./Components/Filter";
-import SearchBar from "./Components/GoogleSearchBar/searchBar";
+import SearchBar from "./Components/GoogleSearchBar";
 
 
 function App() {

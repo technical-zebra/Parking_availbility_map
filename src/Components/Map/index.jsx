@@ -4,7 +4,6 @@ import './index.css'
 // import leaflet map component
 import { MapContainer, TileLayer } from 'react-leaflet'
 import Marker from '../Marker'
-import SearchBox from '../GoogleSearchBar'
 import MyLocation from '../MyLocation/'
 import { iconLocation } from '../../Images/Icon'
 
@@ -100,12 +99,11 @@ function Map(props) {
             key={item.Latitude}
           />
         ))}
-      <MemoizedSearchBox />
     </MapContainer>
   )
 }
 
-const MemoizedSearchBox = React.memo(SearchBox)
+//const MemoizedSearchBox = React.memo(SearchBox)
 export default connect(
   state => ({ filterParams: state }),
   { filter }
