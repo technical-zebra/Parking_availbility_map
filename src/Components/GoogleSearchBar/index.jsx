@@ -16,6 +16,7 @@ export default function SearchBox() {
     provider: provider,
     style: 'bar',
   })
+  
 
   //const results = await provider.search({ query: input.value });
 

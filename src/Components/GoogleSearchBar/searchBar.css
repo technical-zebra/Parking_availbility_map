@@ -1,0 +1,19 @@
+.searchBar {
+    background-color: 'transparent';
+    outline: 'none';
+    width: 90%;
+  }
+ 
+  .searchBarContainer{
+    position: absolute !important;
+    top: 30px;
+    left: 70vw;
+    width: 400px;
+    background-color: white;
+    border: 2px solid rgba(128, 128, 128, .5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+    border-radius: 5px;
+    z-index: 100;
+    
+  }
