@@ -1,5 +1,5 @@
 
-const initialState = { rackType: 'All', rackCount: 0, shelterIndicator: 'Y' }
+const initialState = 'clear'
 
 export default function filterReducer(prevState = initialState, action) {
   const { type, data } = action

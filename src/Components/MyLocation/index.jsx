@@ -14,7 +14,6 @@ export default function MyLocationFAB(props) {
     if (!locationFound) {
       map.locate().on("locationfound", function (e) {
         props.getCords(e.latlng)
-        console.log(e.latlng);
         map.flyTo(e.latlng, map.getZoom());
         const circle = L.circle(e.latlng, 100);
         circle.addTo(map);

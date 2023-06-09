@@ -180,7 +180,7 @@ function Filter(props) {
 }
 
 export default connect(
-  state => ({ filterParams: state }),
+  state => ({  filterParams: state.filterParams, searchParams: state.searchParams  }),
   {
     filter,
     clear

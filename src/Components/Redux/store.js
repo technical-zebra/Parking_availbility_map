@@ -1,8 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import filterReducer from './filterReducer'
+import { combineReducers } from 'redux';
+import filter from './filterReducer'
+import search from './searchReducer'
+
+const allReducers = combineReducers({
+  filter,
+  search,
+});
 
 const store = configureStore({
-  reducer: filterReducer
+  reducer: allReducers,
 })
 
 export default store;

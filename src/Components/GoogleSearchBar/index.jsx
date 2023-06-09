@@ -5,15 +5,34 @@ import ClearIcon from '@mui/icons-material/Clear';
 
 import { OpenStreetMapProvider} from 'leaflet-geosearch';
 
-const SearchBar = () => {
+// React-Redux
+import {useSelector, useDispatch} from 'react-redux'
+import { search } from '../Redux/action.js'
+
+function SearchBar(props) {
+  const dispatch = useDispatch()
   const [address, setAddress] = useState('');
   const [alternativeResults, setAlternativeResults] = useState([]);
   const [showResult, setShowResult] = useState(null);
+
   const provider = new OpenStreetMapProvider({
     params: {
       email: '', // auth for large number of requests
     },
   })
+
+  const truncateString = (str, maxLength) => {
+    if (str.length > maxLength) {
+      return str.slice(0, maxLength) + '...';
+    }
+    return str;
+  };
+
+  const handleSearch = (result) => {
+    
+    dispatch(search({ lat:result.y, lng:result.x, label:truncateString(result.label, 8)
+    }));
+  }
 
   const handleClearClick = () => {
     setAddress('');
@@ -21,7 +40,7 @@ const SearchBar = () => {
   };
 
   const handleAltResultClick = (e, index) => {
-    console.log(alternativeResults[index]);
+    handleSearch(alternativeResults[index]);
   };
 
   const handleKeyDown = async (e) => {
@@ -29,7 +48,7 @@ const SearchBar = () => {
       const results = await provider.search({ query: e.target.value});
       setAlternativeResults(results.slice(0, 5));
       if (showResult){
-        console.log({lat:results[0].x, lng:results[0].y })
+        handleSearch(results[0]);
         setShowResult(false);
       }
       setShowResult(true);
@@ -43,8 +62,8 @@ const SearchBar = () => {
         <InputBase
           className="searchBar"
           placeholder="Enter address"
-          value={address} // Bind the input value to the address state
-          onChange={(e) => setAddress(e.target.value)} // Update the address state on input change
+          value={address} 
+          onChange={(e) => setAddress(e.target.value)} 
           onKeyDown={handleKeyDown}
           sx={{
             input: {
@@ -74,4 +93,5 @@ const SearchBar = () => {
   );
 };
 
-export default SearchBar;
+export default SearchBar
+

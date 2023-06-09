@@ -1,2 +1,3 @@
-export const filter = (filterParams) => ({ type: 'filter', data: filterParams })
-export const clear = (filterParams) => ({ type: 'clear', data: filterParams })
+export const filter = (params) => ({ type: 'filter', data: params})
+export const clear = (params) => ({ type: 'clear', data: params })
+export const search = (params) => ({ type: 'search', data: params})

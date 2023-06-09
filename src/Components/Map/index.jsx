@@ -1,67 +1,78 @@
-import React, { useState, useEffect } from 'react'
-import './index.css'
+import React, { useState, useEffect } from "react";
+import "./index.css";
 
 // import leaflet map component
-import { MapContainer, TileLayer } from 'react-leaflet'
-import Marker from '../Marker'
-import MyLocation from '../MyLocation/'
-import { iconLocation } from '../../Images/Icon'
+import { MapContainer, TileLayer, useMap } from "react-leaflet";
+
+import Marker from "../Marker";
+import MyLocation from "../MyLocation/";
+import { iconLocation } from "../../Images/Icon";
+
 
 // import request function api
-import fetchData from '../../API/fetchData.js'
+import fetchData from "../../API/fetchData.js";
 
 // import redux
-import { connect } from 'react-redux'
-import { filter } from '../Redux/action.js'
+import { useSelector } from "react-redux";
+import { filter, search } from "../Redux/action.js";
 
 function Map(props) {
-  const [fullData, setFullData] = useState([])
-  const [filterData, setFilterData] = useState([])
-  const [isFiltered, setIsFiltered] = useState(false)
-  const [myCords, setMyCords] = useState({})
+  const search = useSelector((state) => state.search);
+  const filter = useSelector((state) => state.filter);
 
-  useEffect(() => {
-    fetchData(1.31, 103.8935379, 1).then((res) => {
+  const [fullData, setFullData] = useState([]);
+  const [filterData, setFilterData] = useState([]);
+  const [isFiltered, setIsFiltered] = useState(false);
+  const [myCords, setMyCords] = useState({});
+  const [defaultProps, setDefaultProps] = useState({
+    center: {
+    lat: 1.31,
+    lng: 103.8935379,
+  },
+  zoom: 15,});
+
+  const searchLocation = (lat, lng) => {
+    fetchData(lat, lng, 0.5).then((res) => {
       setFullData(res)
     })
-  }, [])
-
-  //e.includes('_RACKS');
+  }
 
   useEffect(() => {
-    if (props.filterParams === 'clear') {
-      setIsFiltered(false)
-    }
-    else {
-      const { RackType, RackCount, ShelterIndicator } = props.filterParams;
+    searchLocation(1.31, 103.8935379)
+  }, [])
+
+  useEffect(() => {
+    if (filter === "clear") {
+      setIsFiltered(false);
+    } else {
+      const { RackType, RackCount, ShelterIndicator } = filter;
 
       const newData = fullData.filter(
         (e) =>
-          (RackType === 'All' ||
-            (RackType === 'Racks' && e.RackType.includes('_RACKS')) ||
-            (RackType === 'Yellow Box' && e.RackType === 'Yellow Box')) &&
+          (RackType === "All" ||
+            (RackType === "Racks" && e.RackType.includes("_RACKS")) ||
+            (RackType === "Yellow Box" && e.RackType === "Yellow Box")) &&
           e.RackCount >= RackCount &&
           e.ShelterIndicator === ShelterIndicator
-      )
-      setFilterData(newData)
-      setIsFiltered(true)
+      );
+      setFilterData(newData);
+      setIsFiltered(true);
     }
-  }, [props.filterParams, fullData])
+  }, [filter, fullData]);
+
+
 
   const getCords = (e) => {
-    fetchData(e.lat, e.lng, 0.5).then((res) => {
-      setFullData(res)
-    })
+    searchLocation(e.lat, e.lng)
     setMyCords({ lat: e.lat, lng: e.lng })
   }
 
-  const defaultProps = {
-    center: {
-      lat: 1.3521,
-      lng: 103.8198,
-    },
-    zoom: 15,
-  }
+  useEffect(() => {
+    const {lat, lng} = search
+    console.log(search);
+    searchLocation(lat, lng)
+  }, [search])
+
 
   return (
     <MapContainer
@@ -76,35 +87,30 @@ function Map(props) {
       />
       <Marker lat="1.3159" long="103.8758" info="JCU School. Yeah!!!" />
 
-      {myCords.lat && myCords.lng && !isNaN(myCords.lat) && !isNaN(myCords.lng) && (
-        <Marker lat={myCords.lat} long={myCords.lng} info="My Location!!!" icon={iconLocation} />
-      )}
+      {myCords.lat &&
+        myCords.lng &&
+        !isNaN(myCords.lat) &&
+        !isNaN(myCords.lng) && (
+          <Marker
+            lat={myCords.lat}
+            long={myCords.lng}
+            info="My Location!!!"
+            icon={iconLocation}
+          />
+        )}
 
       <MyLocation getCords={getCords} />
 
-      {isFiltered
-        ? filterData.map((item) => (
-          <Marker
-            lat={item.Latitude}
-            long={item.Longitude}
-            info={`Rack Counts: ${item.RackCount}`}
-            key={item.Latitude}
-          />
-        ))
-        : fullData.map((item) => (
-          <Marker
-            lat={item.Latitude}
-            long={item.Longitude}
-            info={`Name: ${item.Description} Rack Counts: ${item.RackCount}`}
-            key={item.Latitude}
-          />
-        ))}
+      {(isFiltered ? filterData : fullData).map((item) => (
+        <Marker
+          lat={item.Latitude}
+          long={item.Longitude}
+          info={`Name: ${item.Description} Rack Counts: ${item.RackCount}`}
+          key={item.Latitude}
+        />
+      ))}
     </MapContainer>
-  )
+  );
 }
 
-//const MemoizedSearchBox = React.memo(SearchBox)
-export default connect(
-  state => ({ filterParams: state }),
-  { filter }
-)(Map)
+export default Map;
