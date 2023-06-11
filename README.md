@@ -37,4 +37,5 @@ React Redux is used in the provided code to manage the application state of bicy
 
 
 ## on Local
-Cloned repository and run **npm start run**
+Cloned repository 
+run ``npm start run``
