@@ -1,7 +1,7 @@
 # Parking_availability _map
 
 
-The goal of the **Parking_availbility_map** project is to provide a convenient and user-friendly bicycle parking map application for **cycling enthusiasts, athletes, and individuals** who use bicycles as a mode of transportation in **Singapore**. The main functionality of this application is to allow users to **search for nearby bicycle parking spaces** and **filter them based on specific criteria**, ensuring a convenient and accessible travel experience.
+The goal of the **Parking_availability_map** project is to provide a convenient and user-friendly bicycle parking map application for **cycling enthusiasts, athletes, and individuals** who use bicycles as a mode of transportation in **Singapore**. The main functionality of this application is to allow users to **search for nearby bicycle parking spaces** and **filter them based on specific criteria**, ensuring a convenient and accessible travel experience.
 
 
 ## Challenges and different implementation options
