@@ -48,9 +48,6 @@ User Address Localization
 # Running the project
 
 
-## on Github Page
-
-
 ## on Local
 Cloned repository 
 
