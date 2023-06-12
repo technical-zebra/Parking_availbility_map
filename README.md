@@ -30,7 +30,7 @@ Considering these factors, we decided to switch to using **node.js (Express.js)*
 ## React Redux
 React Redux is used in the provided code to manage the application state of bicycle parking lots filter. It includes action creators (filter and clear), a reducer (locationReducer), and a store configuration using configureStore. The store is exported as the default export. React Redux enables components to dispatch actions and access the state from the store.
 
-# Screenshots
+## Screenshots
 
 
 ![Alt text](https://github.com/technical-zebra/parking_availbility_map/blob/main/Screenshots/search.png "image demo")
