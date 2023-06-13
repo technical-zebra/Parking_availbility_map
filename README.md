@@ -45,7 +45,7 @@ Bicycle Parking Spot Filtering
 User Address Localization
 
 # Proxy Server
-(https://github.com/technical-zebra/BikeMapAPi)[https://github.com/technical-zebra/BikeMapAPi]
+[https://github.com/technical-zebra/BikeMapAPi](https://github.com/technical-zebra/BikeMapAPi)
 
 # Running the project
 
