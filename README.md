@@ -44,6 +44,8 @@ Bicycle Parking Spot Filtering
 ![Alt text](https://github.com/technical-zebra/parking_availbility_map/blob/main/Screenshots/geolocation.png "image demo")
 User Address Localization
 
+# Proxy Server
+(https://github.com/technical-zebra/BikeMapAPi)[https://github.com/technical-zebra/BikeMapAPi]
 
 # Running the project
 
